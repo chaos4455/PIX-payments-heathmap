@@ -1,42 +1,46 @@
-# 📊 Payment Transaction Heatmap Analysis for PIX in POS System
+# 📊 Análise de Heatmap de Transações de Pagamento PIX em Sistema POS
 
-![Python](https://img.shields.io/badge/Python-3.9%2B-blue)
-![Pandas](https://img.shields.io/badge/Pandas-1.3.3-green)
-![Flask](https://img.shields.io/badge/Flask-2.0.1-orange)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-13.3-yellowgreen)
+[![Python](https://img.shields.io/badge/Python-3.9%2B-blue?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
+[![Pandas](https://img.shields.io/badge/Pandas-1.3.3-green?style=for-the-badge&logo=pandas&logoColor=white)](https://pandas.pydata.org/)
+[![Flask](https://img.shields.io/badge/Flask-2.0.1-orange?style=for-the-badge&logo=flask&logoColor=white)](https://flask.palletsprojects.com/)
+[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-13.3-yellowgreen?style=for-the-badge&logo=postgresql&logoColor=white)](https://www.postgresql.org/)
+[![Docker](https://img.shields.io/badge/Docker-🐳-blue?style=for-the-badge&logo=docker&logoColor=white)](https://www.docker.com/)
+[![JWT](https://img.shields.io/badge/JWT-🔑-yellow?style=for-the-badge&logo=jsonwebtokens&logoColor=black)](https://jwt.io/)
+[![Qdrant](https://img.shields.io/badge/Qdrant-🌐-lightgrey?style=for-the-badge&logo=dataverse&logoColor=black)](https://qdrant.tech/)
+[![YAML](https://img.shields.io/badge/YAML-📜-purple?style=for-the-badge&logo=yaml&logoColor=white)](https://yaml.org/)
 
-## 🚀 Introduction
+## 🚀 Introdução
 
-This project involves the analysis of **historical data** from a **POS system** after the implementation of **automation**. The focus is on **PIX payment transactions**, examining timeframes and metrics to identify patterns in transaction values. 
+Este projeto envolve a análise de **dados históricos** de um **sistema POS** após a implementação de **automação**. O foco está nas **transações de pagamento PIX**, examinando períodos de tempo e métricas para identificar padrões nos valores das transações.
 
-By using **heatmaps**, we can visualize areas of interest, ranging from low to high transaction values, and provide insights into key performance indicators. The heatmaps use a color gradient that spans from **light yellow** 🌼, indicating low values, to **orange** 🍊 and **red** 🔴, highlighting areas of higher transaction concentration.
-
----
-
-## 🎯 Objectives
-
-The main objectives of this analysis are:
-
-- **Evaluate transactional behavior** post-automation in a POS environment.
-- **Identify anomalies** or patterns in transaction values across various timeframes.
-- **Present visual insights** through heatmaps that help stakeholders to quickly understand transaction trends and points of interest.
+Através do uso de **heatmaps**, podemos visualizar áreas de interesse, variando de valores de transação baixos a altos, e fornecer insights sobre indicadores-chave de desempenho. Os heatmaps utilizam um gradiente de cores que varia de **amarelo claro** 🌼, indicando valores baixos, a **laranja** 🍊 e **vermelho** 🔴, destacando áreas de maior concentração de transações.
 
 ---
 
-## 🛠️ Technical Stack
+## 🎯 Objetivos
 
-The following technologies and libraries were utilized in the analysis and generation of heatmaps:
+Os principais objetivos desta análise são:
 
-- **Python 3.9+**: Core programming language for data analysis and visualizations.
-- **Pandas** 📊: Data manipulation and analysis library.
-- **Matplotlib & Seaborn** 🌈: Libraries for generating heatmaps and other types of visualizations.
-- **Numpy** ➗: For numerical computations.
-- **Flask** 🚀: Backend framework for serving the data and API.
-- **PostgreSQL** 🗄️: Database for storing transaction data.
-- **Docker** 🐳: For containerization and environment consistency.
-- **JWT Authentication** 🔑: Used for securing API endpoints that provide transaction data.
-- **Qdrant** 🌐: For vector database management and optimized querying.
-- **YAML** 📜: For configuration management of servers and endpoints.
+- **Avaliar o comportamento transacional** pós-automação em um ambiente POS.
+- **Identificar anomalias** ou padrões nos valores das transações em vários períodos de tempo.
+- **Apresentar insights visuais** através de heatmaps que auxiliem as partes interessadas a compreender rapidamente as tendências de transação e pontos de interesse.
+
+---
+
+## 🛠️ Stack Tecnológico
+
+As seguintes tecnologias e bibliotecas foram utilizadas na análise e geração dos heatmaps:
+
+- **Python 3.9+**: Linguagem de programação principal para análise de dados e visualizações.
+- **Pandas** 📊: Biblioteca para manipulação e análise de dados.
+- **Matplotlib & Seaborn** 🌈: Bibliotecas para geração de heatmaps e outros tipos de visualizações.
+- **Numpy** ➗: Para computações numéricas.
+- **Flask** 🚀: Framework backend para servir os dados e a API.
+- **PostgreSQL** 🗄️: Banco de dados para armazenamento de dados de transação.
+- **Docker** 🐳: Para conteinerização e consistência do ambiente.
+- **Autenticação JWT** 🔑: Utilizada para proteger os endpoints da API que fornecem dados de transação.
+- **Qdrant** 🌐: Para gerenciamento de banco de dados vetorial e consultas otimizadas.
+- **YAML** 📜: Para gerenciamento de configuração de servidores e endpoints.
 
 ---
 
@@ -66,19 +70,18 @@ The following technologies and libraries were utilized in the analysis and gener
 
 ---
 
-## 🔄 Data Processing Workflow
+## 🔄 Fluxo de Processamento de Dados
 
-The data processing pipeline for this analysis follows these key steps:
+O pipeline de processamento de dados para esta análise segue estas etapas principais:
 
-1. **Data Ingestion** 📥: Data is extracted from the **PostgreSQL database**, which stores all the relevant PIX transaction records.
-   
-2. **Preprocessing** 🧹: The data is cleaned and formatted using **Pandas**, ensuring that missing or inconsistent entries are handled. Date and time features are also processed to align the data across the timeframe.
+1. **Coleta de Dados** 📥: Os dados são extraídos do **banco de dados PostgreSQL**, que armazena todos os registros de transações PIX relevantes.
 
-3. **Metric Calculation** 🔢:
-   - **Maximum Adjusted Transaction**: Calculated by normalizing transaction values to account for inflation or operational changes.
-   - **Minimum Adjusted Transaction**: Similar to the maximum but focuses on the lowest values.
-   - **Mean Transaction**: Average value calculated for each timeframe.
-   - **Maximum and Minimum Transaction**: Basic metrics showing extremes in transaction values.
+2. **Pré-processamento** 🧹: Os dados são limpos e formatados usando **Pandas**, garantindo que entradas ausentes ou inconsistentes sejam tratadas. Os recursos de data e hora também são processados para alinhar os dados no período de tempo.
 
-4. **Visualization** 🎨: Using **Matplotlib** and **Seaborn**, the cleaned data is passed into the heatmap function to generate the visualizations.
+3. **Cálculo de Métricas** 🔢:
+   - **Transação Máxima Ajustada**: Calculada normalizando os valores das transações para levar em consideração a inflação ou alterações operacionais.
+   - **Transação Mínima Ajustada**: Semelhante à máxima, mas com foco nos valores mais baixos.
+   - **Transação Média**: Valor médio calculado para cada período de tempo.
+   - **Transação Máxima e Mínima**: Métricas básicas que mostram extremos nos valores das transações.
 
+4. **Visualização** 🎨: Usando **Matplotlib** e **Seaborn**, os dados limpos são passados para a função de heatmap para gerar as visualizações.
