@@ -42,41 +42,27 @@ The following technologies and libraries were utilized in the analysis and gener
 
 ## 📈 Heatmaps
 
+![mapa_calor_ociosidade_por_hora_loja](https://github.com/user-attachments/assets/355f8769-7ebc-43e8-b3fb-aedc858fe30c)
 
-A set of **heatmaps** was generated to provide insights into the **PIX transactions** over time, focusing on different metrics. Each heatmap visualizes the concentration and distribution of transaction values, allowing for easier identification of areas requiring attention or optimization. Below are the primary heatmaps included in the analysis:
+![mapa_calor_precos_baixos_por_hora_cidade](https://github.com/user-attachments/assets/d6456d74-a6f0-4684-951a-e09e71733f65)
 
-### 🌟 Heatmap 1: Maximum Adjusted Transaction Values
-![heatmap_adjusted_max_transacao](images/heatmap_adjusted_max_transacao_c635f47f129c4536c674651124343db9.png)
+![mapa_calor_tempo_medio_por_hora_cidade](https://github.com/user-attachments/assets/46675733-dcf7-42cd-9771-d90d04b2ea45)
 
-This heatmap displays the **maximum adjusted transaction values**. The brighter areas in **red** 🔴 highlight points where transaction values were significantly higher than the average, indicating potential peak usage periods or anomalies.
+![mapa_calor_precos_baixos_por_dia](https://github.com/user-attachments/assets/33bdb700-9e83-48db-848f-d4dc88e475d9)
 
----
+![mapa_calor_tempo_medio_por_dia](https://github.com/user-attachments/assets/2bebe6fc-77d4-414b-b318-a5129c105169)
 
-### 🌟 Heatmap 2: Minimum Adjusted Transaction Values
-![heatmap_adjusted_min_transacao](images/heatmap_adjusted_min_transacao_480e36f8ad70b93fba0b7560971a2bd1.png)
+![mapa_calor_media_transacoes_por_dia](https://github.com/user-attachments/assets/7252bfd5-8c8a-4de3-85c0-293d4aaf0b1e)
 
-This heatmap focuses on the **minimum adjusted transaction values**, helping to identify periods where transaction amounts dropped significantly, potentially pointing to low traffic or operational inefficiencies.
+![mapa_calor_minimos_por_dia](https://github.com/user-attachments/assets/641ed4ea-a7b5-4fce-8fb4-74b483daa0eb)
 
----
+![mapa_calor_tempo_medio_por_semana](https://github.com/user-attachments/assets/746ec069-3f1e-4f18-b769-d043ae08ddfc)
 
-### 🌟 Heatmap 3: Mean Transaction Values
-![heatmap_mean_transacao](images/heatmap_mean_transacao_d32c0c3f1088e1a3db9947e21776430f.png)
+![mapa_calor_minimos_por_semana](https://github.com/user-attachments/assets/eff1f167-a8bd-4fbb-8a3d-b41724bade87)
 
-This heatmap displays the **mean transaction values**, offering insights into the average transaction amounts during specific timeframes. Areas with **orange** 🍊 or **red** 🔴 indicate higher mean values, while lighter colors point to lower averages.
+![mapa_calor_dia_mean](https://github.com/user-attachments/assets/89ac3c92-3eca-484d-880c-337f537a00e9)
 
----
-
-### 🌟 Heatmap 4: Maximum Transaction Values
-![heatmap_max_transacao](images/heatmap_max_transacao_987198a6695bb4487c25c839e548f819.png)
-
-This heatmap captures the **maximum transaction values** across the dataset. High-value transactions are highlighted in **red** 🔴, signaling times where the system processed larger payments.
-
----
-
-### 🌟 Heatmap 5: Minimum Transaction Values
-![heatmap_min_transacao](images/heatmap_min_transacao_907499c2e6b67948cc1cf525b504f44a.png)
-
-This heatmap provides insights into the **minimum transaction values**, allowing stakeholders to identify when the smallest transactions occurred, which can help in pricing analysis and understanding customer behavior.
+![mapa_calor_dia_min](https://github.com/user-attachments/assets/75cc5141-a6be-4b06-b615-17ace33617a7)
 
 ---
 
